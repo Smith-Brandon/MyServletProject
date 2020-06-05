@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>$Title$</title>
 </head>
-<body>
+<body style="text-align:center;">
 <h3>Stock Watcher</h3>
-<p>To Continue Click <a href="http://localhost:8080/MyServletProject/input.html">here</a></p>
+<p><a href="http://localhost:8080/MyServletProject/input.html">Add A New Stock Quote</a></p>
 </body>
 </html>

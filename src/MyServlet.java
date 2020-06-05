@@ -1,8 +1,5 @@
-
-
 import java.io.IOException;
-import java.io.*;
-
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +29,6 @@ public class MyServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
     	
-    	
 	}
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,11 +36,15 @@ public class MyServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
 	
-		out.println("<html><body>");
+		// Get variables from input
 		String name = request.getParameter("name");
 		String symbol = request.getParameter("symbol");
 		String price = request.getParameter("price");
 		String yield = request.getParameter("yield");
+		
+		//Display results in html
+		try {
+		out.println("<html><body>");
 		out.println("<h3>This is your Input</h3>");
 		out.println("<table style='width:100%; border:1px solid black;'>");
 		out.println("<tbody>");
@@ -54,17 +54,12 @@ public class MyServlet extends HttpServlet {
 		out.println("<tr><td>Stock Yield</td><td>" + yield + "<td></tr>");
 		out.println("</tbody>");
 		out.println("</table>");
-		// Echo client's request information
-		/*
-		out.println("<p>Echo client information</p>");
-        out.println("<p>Request URI: " + request.getRequestURI() + "</p>");
-        out.println("<p>Protocol: " + request.getProtocol() + "</p>");
-        out.println("<p>PathInfo: " + request.getPathInfo() + "</p>");
-        out.println("<p>Remote Address: " + request.getRemoteAddr() + "</p>");
-		out.println("</body></html>");
-		*/
+		} catch(Exception e) {
+			out.println("An error has occured please ensure you entered valid information.");
+		}
 	}
 
+   
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
