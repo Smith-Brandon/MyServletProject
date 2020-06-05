@@ -7,7 +7,7 @@
 <title>$Title$</title>
 </head>
 <body style="text-align:center;">
-<h3>Stock Watcher</h3>
+<h3>Welcome To My Basic Stock Watcher</h3>
 <p><a href="http://localhost:8080/MyServletProject/input.html">Add A New Stock Quote</a></p>
 </body>
 </html>

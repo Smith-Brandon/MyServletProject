@@ -52,11 +52,13 @@ public class MyServlet extends HttpServlet {
 		out.println("<tr><td>Stock Symbol</td><td>" + symbol + "<td></tr>");
 		out.println("<tr><td>Stock Price</td><td>" + price + "<td></tr>");
 		out.println("<tr><td>Stock Yield</td><td>" + yield + "<td></tr>");
+		out.println("<tr><td><p style='text-align:center;'><a href=\"http://localhost:8080/MyServletProject/input.html\">Add A New Stock Quote</a></p><td></tr>");
 		out.println("</tbody>");
 		out.println("</table>");
 		} catch(Exception e) {
 			out.println("An error has occured please ensure you entered valid information.");
 		}
+		
 	}
 
    
